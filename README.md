@@ -1,4 +1,4 @@
-# UI Clone Task Management
+# UI Task Management
 ## Source
 ### Inpired Design
 [Behance - Task Management Web App](https://www.behance.net/gallery/131606645/Task-Management-Web-App/)
