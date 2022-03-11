@@ -1,8 +1,17 @@
 import logo from './logo.svg';
+import Sidebar from './layouts/Sidebar/Sidebar';
+import Topbar from './layouts/Topbar/Topbar';
+import Main from './layouts/Main/Main';
 
 function App() {
   return (
-    <span>Task Management</span>
+    <div className='flex'>
+      <Sidebar />
+      <div className='w-full'>
+        <Topbar />
+        <Main />
+      </div>
+    </div>
   );
 }
 
