@@ -1,9 +1,10 @@
 import React from 'react'
 import './Button.sass'
 
-function Button({ text, icon, type }) {
+const Button = ({ text, icon, type, onClick }) => {
   return (
     <button
+      onClick={onClick}
       className={`btn ${type}`}
     >
       {

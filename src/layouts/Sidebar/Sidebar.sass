@@ -1,2 +1,28 @@
 .sidebar
   @apply w-72 p-4 h-full border-r sticky top-0 bg-white z-50
+  &__menu
+    @appply w-full
+  &__projects
+    @apply  w-full mt-8
+
+.brand-logo
+  @apply mb-6
+  &__text
+    @apply text-lg font-bold
+
+.menu
+  &__item
+    @apply flex items-center text-left w-full text-gray-500 hover:bg-primary hover:text-white rounded-lg p-2 my-2 space-x-2
+
+.project
+  &__item
+    @apply flex items-center text-gray-500 hover:bg-gray-200 rounded-lg p-2 my-2 space-x-2
+  &__option
+    @apply flex space-x-2 relative flex items-center
+
+.search
+  @apply relative flex items-center
+  &__icon
+    @apply absolute ml-3 h-4 w-4
+  &__input
+    @apply border text-xs p-2 pl-8 rounded-full focus:border-gray-500 focus:outline-none w-full
