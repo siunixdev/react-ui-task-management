@@ -18,3 +18,7 @@
 [Heroicons](https://heroicons.com/)
 
 [BEM](http://getbem.com/)
+
+## Screenshot
+### Home
+![Screenshot](sc/home.png)

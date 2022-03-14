@@ -1,13 +1,14 @@
 import React from 'react'
 import './Main.sass'
 import { Routes, Route } from 'react-router-dom'
+import Home from '../../pages/Home/Home'
 
 function Main() {
   return (
     <div className='main'>
       <div className='main__container'>
         <Routes>
-          <Route path='/home' element="Home" />
+          <Route path='/home' element={<Home />} />
           <Route path='/task' element="Task" />
           <Route path='/plan' element="Plan" />
           <Route path='/team' element="Team" />

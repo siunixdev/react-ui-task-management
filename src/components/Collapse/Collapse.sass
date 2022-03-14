@@ -1,4 +1,9 @@
 .collapse
-  @apply flex items-center justify-between p-2
-  &__text
-    @apply font-semibold text-gray-500
+  @apply flex flex-col w-full
+  &__header
+    @apply flex justify-between items-center mb-2
+    &-text
+      @apply font-semibold text-gray-500
+  &__body
+    &-content
+      @apply h-full w-full
