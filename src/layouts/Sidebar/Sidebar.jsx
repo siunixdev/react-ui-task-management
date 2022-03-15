@@ -1,8 +1,10 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import './Sidebar.sass'
 import { Link, useLocation } from 'react-router-dom'
 import Button from '../../components/Button/Button'
 import Collapse from '../../components/Collapse/Collapse'
+import { useDispatch } from 'react-redux'
+import { setTitle } from '../../actions/app'
 
 var sidebarMenu = [
   {
@@ -65,9 +67,16 @@ var favorites = [
 
 
 function Sidebar() {
+  const dispatch = useDispatch();
+  const [topbarTitle, setTopbarTitle] = useState("")
+
   const location = useLocation()
   const { pathname } = location
   const activeLocation = pathname.split('/')[1]
+
+  useEffect(() => {
+    dispatch(setTitle(topbarTitle))
+  }, [topbarTitle])
 
   return (
     <div className='sidebar'>
@@ -82,7 +91,11 @@ function Sidebar() {
             <ul>
               {
                 sidebarMenu.map((menu, i) => (
-                  <Link to={process.env.REACT_APP_BASE_URL + menu.link} key={i}>
+                  <Link
+                    onClick={() => setTopbarTitle(menu.text)}
+                    key={i}
+                    to={process.env.REACT_APP_BASE_URL + menu.link}
+                  >
                     <li
                       className={`menu ${activeLocation === menu.link ? "menu__item--active" : "menu__item"}`}>
                       {menu.icon}

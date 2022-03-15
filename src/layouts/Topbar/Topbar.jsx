@@ -1,13 +1,16 @@
 import React, { useState } from 'react'
 import Button from '../../components/Button/Button'
 import './Topbar.sass'
+import { useSelector } from 'react-redux'
 
 function Topbar() {
+  const title = useSelector(state => state.appState.title)
+
   const [showMenuAccount, setShowMenuAccount] = useState(false)
 
   return (
     <div className='topbar'>
-      <span className='topbar__title'>Home</span>
+      <span className='topbar__title'>{title}</span>
       <div className='topbar__menu'>
         <div className='relative flex items-center'>
           <div className='absolute ml-3'>
