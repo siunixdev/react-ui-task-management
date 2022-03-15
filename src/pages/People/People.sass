@@ -1,0 +1,17 @@
+.title
+  @apply font-semibold text-gray-500
+
+.people
+  @apply grid gap-6 grid-cols-1 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 2xl:grid-cols-6
+  &__container
+    @apply flex flex-col justify-center items-center space-y-4 text-center py-8
+  &__photo
+    @apply h-16 w-16 bg-primary rounded-full text-white object-cover object-center
+  &__add
+    @apply font-medium text-sm text-primary underline
+  &__name
+    @apply font-medium text-sm text-gray-900
+  &__email
+    @apply text-xs text-gray-500
+  &__job-title
+    @apply font-medium text-sm text-gray-900

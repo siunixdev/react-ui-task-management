@@ -1,9 +1,9 @@
 import React from 'react'
 import './Card.sass'
 
-function Card({ children }) {
+function Card({ children, onClick }) {
   return (
-    <div className='card'>
+    <div className={`card ${onClick ? 'cursor-pointer' : ''}`} onClick={onClick}>
       <div className='card__body'>
         {children}
       </div>

@@ -94,12 +94,12 @@ function Home() {
   return (
     <div className='home'>
       <div className='grid grid-cols-4 gap-4'>
-        <div className='col-span-4 lg:col-span-3'>
+        <div className='col-span-4 lg:col-span-3 space-y-6'>
           <Collapse
             text="Favorites"
             show={true}
           >
-            <div className='my-2 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 mt-8'>
+            <div className='my-2 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 mt-4'>
               {
                 recentProject.map((project, i) => (
                   <Card
@@ -134,6 +134,16 @@ function Home() {
                   </Card>
                 ))
               }
+            </div>
+          </Collapse>
+          <Collapse
+            text="Recent Project"
+            show={true}
+          >
+            <div className='mt-4'>
+              <div className='border-t border-b p-3'>
+                <span className='font-medium'></span>
+              </div>
             </div>
           </Collapse>
         </div>

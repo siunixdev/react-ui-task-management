@@ -1,4 +1,3 @@
-import logo from './logo.svg';
 import Sidebar from './layouts/Sidebar/Sidebar';
 import Topbar from './layouts/Topbar/Topbar';
 import Main from './layouts/Main/Main';
