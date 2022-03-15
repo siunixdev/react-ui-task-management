@@ -22,3 +22,5 @@
 ## Screenshot
 ### Home
 ![Screenshot](sc/home.png)
+### People
+![Screenshot](sc/people.png)
