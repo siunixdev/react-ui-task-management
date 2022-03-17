@@ -3,6 +3,7 @@ import './Main.sass'
 import { Routes, Route } from 'react-router-dom'
 import Home from '../../pages/Home/Home'
 import People from '../../pages/People/People'
+import Task from '../../pages/Task/Task'
 
 function Main() {
   return (
@@ -10,7 +11,7 @@ function Main() {
       <div className='main__container'>
         <Routes>
           <Route path='/home' element={<Home />} />
-          <Route path='/task' element="Task" />
+          <Route path='/task' element={<Task />} />
           <Route path='/plan' element="Plan" />
           <Route path='/people' element={<People />} />
           <Route path='/reporting' element="Reporting" />

@@ -1,6 +1,7 @@
 import React from 'react'
 import './People.sass'
 import Card from '../../components/Card/Card'
+import { PlusIcon } from '@heroicons/react/outline'
 
 var peoples = [
   {
@@ -51,9 +52,7 @@ function People() {
         <Card onClick={() => alert("Add teammate Action")}>
           <div className='people__container'>
             <div className='people__photo'>
-              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="1">
-                <path strokeLinecap="round" strokeLinejoin="round" d="M12 6v6m0 0v6m0-6h6m-6 0H6" />
-              </svg>
+              <PlusIcon className='icon' />
             </div>
             <span className='people__add'>Add Teammate</span>
           </div>

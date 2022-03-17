@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import './Collapse.sass'
 import Button from '../Button/Button'
+import { ChevronDownIcon, ChevronUpIcon } from '@heroicons/react/outline'
 
 const Collapse = ({ text, children, show = false }) => {
   const [recentCollapse, setRecentCollapse] = useState(show)
@@ -12,13 +13,9 @@ const Collapse = ({ text, children, show = false }) => {
           onClick={() => setRecentCollapse(!recentCollapse)}
           icon={
             recentCollapse ?
-              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2">
-                <path strokeLinecap="round" strokeLinejoin="round" d="M5 15l7-7 7 7" />
-              </svg>
+              <ChevronUpIcon className='icon' />
               :
-              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2">
-                <path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7" />
-              </svg>
+              <ChevronDownIcon className='icon' />
           }
           type="btn--secondary btn--pill btn--xs"
         />
