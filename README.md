@@ -24,3 +24,5 @@
 ![Screenshot](sc/home.png)
 ### People
 ![Screenshot](sc/people.png)
+### Task
+![Screenshot](sc/task.png)
