@@ -1,7 +1,7 @@
 import React from 'react'
 import './Avatar.sass'
 
-function Avatar({ img }) {
+const Avatar = ({ img }) => {
   return (
     <img
       src={img}

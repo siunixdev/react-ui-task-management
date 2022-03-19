@@ -42,7 +42,7 @@ var peoples = [
   }
 ]
 
-function People() {
+const People = () => {
   return (
     <div>
       <div className='mb-8'>

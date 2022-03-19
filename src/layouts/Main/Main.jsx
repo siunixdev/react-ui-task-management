@@ -5,7 +5,7 @@ import Home from '../../pages/Home/Home'
 import People from '../../pages/People/People'
 import Task from '../../pages/Task/Task'
 
-function Main() {
+const Main = () => {
   return (
     <div className='main'>
       <div className='main__container'>

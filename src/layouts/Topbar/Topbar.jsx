@@ -8,7 +8,7 @@ import {
   BellIcon
 } from '@heroicons/react/outline'
 
-function Topbar() {
+const Topbar = () => {
   const title = useSelector(state => state.appState.title)
 
   const [showMenuAccount, setShowMenuAccount] = useState(false)

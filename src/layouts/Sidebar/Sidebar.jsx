@@ -57,7 +57,7 @@ var favorites = [
 ]
 
 
-function Sidebar() {
+const Sidebar = () => {
   const dispatch = useDispatch();
   const [topbarTitle, setTopbarTitle] = useState("")
 

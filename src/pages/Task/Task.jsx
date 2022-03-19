@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import './Task.sass'
 import {
   CheckCircleIcon,
@@ -6,7 +6,8 @@ import {
   ExclamationCircleIcon
 } from '@heroicons/react/solid'
 
-function Task() {
+const Task = () => {
+  const [showDetail, setShowDetail] = useState(true)
   return (
     <div>
       <div className='flex items-center justify-between mb-8'>
@@ -40,7 +41,7 @@ function Task() {
                   <td className='p-2'>
                     <div className='flex items-center space-x-2 cursor-pointer font-medium text-warning hover:underline'>
                       <ExclamationCircleIcon className='icon' />
-                      <span onClick={() => alert("Employee List Clicked")}>
+                      <span onClick={() => setShowDetail(true)}>
                         Dashboard
                       </span>
                     </div>

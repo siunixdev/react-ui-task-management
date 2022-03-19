@@ -90,7 +90,7 @@ const data = {
   }]
 };
 
-function Home() {
+const Home = () => {
   return (
     <div className='home'>
       <div className='grid grid-cols-4 gap-4'>
