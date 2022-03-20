@@ -1,15 +1,31 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import './Task.sass'
 import {
   CheckCircleIcon,
   DotsCircleHorizontalIcon,
   ExclamationCircleIcon
 } from '@heroicons/react/solid'
+import TaskDetail from '../TaskDetail/TaskDetail'
+import { useDispatch, useSelector } from 'react-redux'
+import { setShowDetail } from '../../actions/task'
 
 const Task = () => {
-  const [showDetail, setShowDetail] = useState(true)
+  const dispatch = useDispatch()
+  const showDetail = useSelector(state => state.taskState.showDetail)
+
+  const detail = () => {
+    dispatch(setShowDetail(true))
+  }
+
   return (
     <div>
+      {
+        showDetail && (
+          <div>
+            <TaskDetail />
+          </div>
+        )
+      }
       <div className='flex items-center justify-between mb-8'>
         <span className='title'>Task</span>
         <div>
@@ -41,7 +57,7 @@ const Task = () => {
                   <td className='p-2'>
                     <div className='flex items-center space-x-2 cursor-pointer font-medium text-warning hover:underline'>
                       <ExclamationCircleIcon className='icon' />
-                      <span onClick={() => setShowDetail(true)}>
+                      <span onClick={() => detail()}>
                         Dashboard
                       </span>
                     </div>

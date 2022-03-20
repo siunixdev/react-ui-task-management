@@ -1,0 +1,20 @@
+.task
+  @apply space-y-4
+  &__title
+    @apply font-medium text-lg
+  &__detail
+    @apply w-full text-left space-y-2
+  &__subdetail
+    @apply py-2 w-4/12
+  &__subtitle
+    @apply flex flex-col space-y-2
+
+.subtask
+  @apply flex justify-between items-center gap-4
+
+.attachment
+  @apply flex flex-col items-center justify-center text-center space-y-2
+  &__button
+    @apply flex bg-primary text-white p-4 rounded-full
+  &__text
+    @apply text-primary text-xs

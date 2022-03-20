@@ -26,3 +26,5 @@
 ![Screenshot](sc/people.png)
 ### Task
 ![Screenshot](sc/task.png)
+### Task Datail
+![Screenshot](sc/task-detail.png)

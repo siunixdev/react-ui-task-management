@@ -17,46 +17,6 @@ import {
   PlusSmIcon
 } from '@heroicons/react/outline'
 
-var sidebarMenu = [
-  {
-    text: 'Home',
-    icon: <HomeIcon className='icon' />,
-    link: 'home'
-  },
-  {
-    text: 'My Task',
-    icon: <ClipboardCheckIcon className='icon' />,
-    link: 'task'
-  },
-  {
-    text: 'My Plan',
-    icon: <CalendarIcon className='icon' />,
-    link: 'plan'
-  },
-  {
-    text: 'People',
-    icon: <UserGroupIcon className='icon' />,
-    link: 'people'
-  },
-  {
-    text: 'Reporting',
-    icon: <DocumentReportIcon className='icon' />,
-    link: 'reporting'
-  },
-]
-
-var favorites = [
-  {
-    text: "App Development",
-    to: "/",
-  },
-  {
-    text: "Web Design",
-    to: "/",
-  },
-]
-
-
 const Sidebar = () => {
   const dispatch = useDispatch();
   const [topbarTitle, setTopbarTitle] = useState("")
@@ -68,6 +28,45 @@ const Sidebar = () => {
   useEffect(() => {
     dispatch(setTitle(topbarTitle))
   }, [topbarTitle])
+
+  var sidebarMenu = [
+    {
+      text: 'Home',
+      icon: <HomeIcon className='icon' />,
+      link: 'home'
+    },
+    {
+      text: 'My Task',
+      icon: <ClipboardCheckIcon className='icon' />,
+      link: 'task'
+    },
+    {
+      text: 'My Plan',
+      icon: <CalendarIcon className='icon' />,
+      link: 'plan'
+    },
+    {
+      text: 'People',
+      icon: <UserGroupIcon className='icon' />,
+      link: 'people'
+    },
+    {
+      text: 'Reporting',
+      icon: <DocumentReportIcon className='icon' />,
+      link: 'reporting'
+    },
+  ]
+
+  var favorites = [
+    {
+      text: "App Development",
+      to: "/",
+    },
+    {
+      text: "Web Design",
+      to: "/",
+    },
+  ]
 
   return (
     <div className='sidebar'>
